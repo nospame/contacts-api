@@ -1,0 +1,6 @@
+GET http://localhost:3000/first-contact.json
+
+###
+GET http://localhost:3000/all-contacts.json
+
+###
