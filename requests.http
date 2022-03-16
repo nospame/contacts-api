@@ -1,6 +1,22 @@
-GET http://localhost:3000/first-contact.json
+GET http://localhost:3000/contacts/319
 
 ###
-GET http://localhost:3000/all-contacts.json
+GET http://localhost:3000/contacts
 
 ###
+POST http://localhost:3000/contacts
+content-type: application/json
+
+{
+  "first_name": "Scott",
+  "last_name": "Smalls",
+  "email": "ssmalls@smaller.com",
+  "phone_number": "555-0123",
+  "address": "Newark, NJ"
+}
+
+###
+GET http://localhost:3000/contacts/319/nearest
+
+###
+DELETE http://localhost:3000/contacts/319

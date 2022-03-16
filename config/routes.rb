@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get "/first-contact" => "contacts#first_person"
-  get "/all-contacts" => "contacts#all_people"
+  get "/contacts/:id" => "contacts#show"
+  get "/contacts" => "contacts#index"
+  post "/contacts" => "contacts#new"
+  delete "/contacts/:id" => "contacts#destroy"
+  get "/contacts/:id/nearest" => "contacts#nearest"
 end
