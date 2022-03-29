@@ -8,15 +8,15 @@ POST http://localhost:3000/contacts
 content-type: application/json
 
 {
-  "first_name": "Scott",
-  "last_name": "Smalls",
+  "first_name": "Smith",
+  "last_name": "Smally",
   "email": "ssmalls@smaller.com",
   "phone_number": "555-0123",
-  "address": "Newark, NJ"
+  "address": "Hackensack, NJ"
 }
 
 ###
-GET http://localhost:3000/contacts/319/nearest
+GET http://localhost:3000/contacts/202/nearest
 
 ###
 DELETE http://localhost:3000/contacts/319

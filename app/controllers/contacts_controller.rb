@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
 
   def show
     contact = Contact.find_by(id: params[:id])
-    render json: contact.as_json
+    render json: contact.as_json(methods: [:address, :geocode])
   end
 
   def index
@@ -33,8 +33,8 @@ class ContactsController < ApplicationController
 
   def nearest
     contact = Contact.find_by(id: params[:id])
-    venue = Contact.near([contact.latitude, contact.longitude])
-    render json: venue.as_json
+    nearest_contact = contact.nearbys()
+    render json: {contact: contact.as_json, nearest_contact: nearest_contact.as_json}
   end
 
 end
